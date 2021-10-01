@@ -10,7 +10,7 @@ def foo(x):
     else:
         ra,rb = foo(x-1),foo(x-2)
         return ra+rb
-    pass
+
 
 def longest_run(mylist, key): 
     a = 0
@@ -26,8 +26,7 @@ def longest_run(mylist, key):
                 a=0
      return b           
          
-        
-    pass
+
 
 
 class Result:
@@ -57,7 +56,6 @@ def longest_run_recursive(mylist, key):
         testresult = merge_object(result1, result2)
     return testresult
         
-    pass
 
 ## Feel free to add your own tests here.
 def test_longest_run():
