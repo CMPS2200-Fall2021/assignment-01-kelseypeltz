@@ -5,11 +5,28 @@ See assignment-01.pdf for details.
 # no imports needed.
 
 def foo(x):
-    ### TODO
+    if (x<=1):
+        return x
+    else:
+        ra,rb = foo(x-1),foo(x-2)
+        return ra+rb
     pass
 
-def longest_run(mylist, key):
-    ### TODO
+def longest_run(mylist, key): 
+    a = 0
+    b = 0 
+    for i in range(len(mylist)):
+        if mylist[i] == key:
+            a += 1
+            if (b<a):
+                b=a
+                a=0
+                
+            else: 
+                a=0
+     return b           
+         
+        
     pass
 
 
@@ -27,7 +44,19 @@ class Result:
     
     
 def longest_run_recursive(mylist, key):
-    ### TODO
+    if len(mylist) == 1
+        if mylist[0]==key:
+            testresult = Result(1, 1, 1, True)
+    elif len(mylist) == 1
+        if mylist[0]!=key:
+            testresult = Result(0, 0, 0, False)
+    else:
+        length = len(mylist)//2
+        result1 = longest_run_recursive(mylist[:length], key)
+        result2 = longest_run_recursive(mylist[length:], key)
+        testresult = merge_object(result1, result2)
+    return testresult
+        
     pass
 
 ## Feel free to add your own tests here.
